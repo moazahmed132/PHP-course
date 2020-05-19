@@ -53,8 +53,33 @@
 
 		// merge two associative arrays 
 		$ninjasMerged = array_merge($ninjasOne, $ninjasTwo);
-		print_r($ninjasMerged);
+		//print_r($ninjasMerged);
 
+
+// multi-dimensional arrays
+		// create multi-dimensional indexed arrays
+		/* $blogs = [
+			['mario party', 'mario', 'lorem', 30],
+			['nada party', 'nada', 'lorem', 25],
+			['saleh party', 'saleh', 'lorem', 25]
+		];
+		
+		print_r($blogs[1][0]); */
+
+		// create multi-dimensional associative arrays
+		 $blogs = [
+			['title' => 'mario party', 'author' => 'mario','content' =>  'lorem','likes' => 30],
+			['title' => 'nada party',  'author' => 'nada', 'content' => 'lorem', 'likes' =>25],
+			['title' => 'saleh party', 'author' => 'saleh','content' =>  'lorem','likes' => 25]
+		];
+		//echo $blogs[2] ['likes']
+	
+		// add new array
+		$blogs[] = ['title' => 'moaz party', 'author' => 'moaz','content' =>  'lorem','likes' => 35];
+		//print_r($blogs);
+
+		// remove an array 
+		//print_r(array_pop($blogs));
 
  ?>
 
