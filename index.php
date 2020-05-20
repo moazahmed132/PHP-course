@@ -1,19 +1,57 @@
 <?php 
 
-// functions
-	// we can use default value
-	function sayHello($name = 'moaz', $time = 'morning'){
-		echo "good $time $name";
+// variable scope
+
+	//local
+		
+		function myFunc(){ 
+			$price = 20;
+			echo $price;
+		}
+
+		//myFunc();
+		//echo $price;
+
+		function myFuncTwo($age){
+			echo $age;
+		}
+		
+
+		//myFuncTwo(25);
+		//echo $age;
+
+	// global
+
+	$name = 'mario';
+
+	/* function sayHello(){
+		global $name; // => will not work without this line
+		$name = 'moana'; // => the name will change globally
+		echo "hello $name";
 	}
 
-	//sayHello('ahmed', 'after noon');
+	sayHello();
+	echo $name; */
 
-	function formatProduct($product){
-		//echo "{$product['name']} costs {$product['price']} to buy";
-		return "{$product['name']} costs {$product['price']} to buy";
+	/* function sayBye($name){
+		$name = 'wario';
+		echo "bye $name" . '<br />';
 	}
-	/* $formatted = formatProduct(['name' => 'gold star', 'price' => '20']);
-	echo $formatted; */
+
+	sayBye($name); // name => wario
+	echo $name;  // name => mario */
+
+
+	// if we want to change the name in all 
+
+	function sayBye(&$name){
+		$name = 'wario';
+		echo "bye $name" . '<br />';
+	}
+
+	sayBye($name); // name => wario
+	echo $name;  // name => wario
+
  ?>
 
  <!DOCTYPE html>
