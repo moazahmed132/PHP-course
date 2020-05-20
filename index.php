@@ -30,6 +30,18 @@ $products = [
 } */
 
 
+// continue & break
+
+	foreach($products as $product){
+		if($product['name'] === 'red shell'){
+		break;
+		}
+		if($product['price'] === 10){
+			continue;
+		}
+		echo $product['name'] . '<br />';
+	}
+
  ?>
 
  <!DOCTYPE html>
@@ -38,7 +50,7 @@ $products = [
  	<title>PHP Tutorials </title>
  </head>
  <body>
- <div>
+ <!-- <div>
 	 <ul>
 			<?php  foreach($products as $product) {?>
 				<?php if($product['price'] > 15){ ?>
@@ -46,7 +58,7 @@ $products = [
 				<?php } ?>
 			<?php  } ?>
 	 </ul>
- </div>
+ </div> -->
 	
  </body>
  </html>
