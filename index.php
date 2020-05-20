@@ -1,33 +1,35 @@
 <?php 
 
-// comparisons booleans (true or false)
+// conditional-statement
 
-	//echo true; => "1"
-	//echo false; => ""  => empty string
+	/*  $price = 22 ; 
 
-	// numbers
-		//echo 5 < 10;
-		//echo 5 > 10;
-		//echo 5 == 10;
-		//echo 10 == 10;
-		//echo 5 != 10;
+	if ($price > 30) {
+		echo 'more than 30';
+	}elseif($price > 20 && $price < 30){
+		echo 'more than 20 and less than 30';
+	}else{
+		echo 'less than 20 ';
+	}
+	echo '<br />'; */
 
-	// strings
-		//echo 'moaz' < 'nada'; =>  it compare the first letter in each words and and if the letter comes before the other letter it returns true
+$products = [
+	['name' => 'shiny star', 'price' => 20],
+	['name' => 'green shell', 'price' => 10],
+	['name' => 'red shell', 'price' => 15],
+	['name' => 'gold coin', 'price' => 5],
+	['name' => 'lightning bolt', 'price' => 40],
+	['name' => 'banana skin', 'price' => 2]
+]; 
 
-		//echo 'moaz' > 'Moaz';  //=> lower is more than upper
-
-		//echo 'mario' == 'mario'; //=> true
-
-		// echo 'mario' == 'Mario' // false
-
-	// loose Vs strict equal comparison
-
-		// echo 5 == '5'; // loose comparison => the type is ignored => true
-		// echo 5 === '5' // strict comparison => false
+/* foreach($products as $product){
+	if($product['price'] > 20 || $product['price'] < 10 ){
+		print_r($product);
+		print_r('<br />');
+	}
+} */
 
 
-	
  ?>
 
  <!DOCTYPE html>
@@ -36,6 +38,15 @@
  	<title>PHP Tutorials </title>
  </head>
  <body>
-		
+ <div>
+	 <ul>
+			<?php  foreach($products as $product) {?>
+				<?php if($product['price'] > 15){ ?>
+					<li><?php echo $product['name']; ?></li>
+				<?php } ?>
+			<?php  } ?>
+	 </ul>
+ </div>
+	
  </body>
  </html>
