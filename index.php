@@ -1,57 +1,15 @@
 <?php 
 
-// variable scope
+// include and require
 
-	//local
-		
-		function myFunc(){ 
-			$price = 20;
-			echo $price;
-		}
+include('ninjas.php'); // can written like include 'ninjas.php'
+require('ninjas.php'); // can written like require 'ninjas.php'
 
-		//myFunc();
-		//echo $price;
-
-		function myFuncTwo($age){
-			echo $age;
-		}
-		
-
-		//myFuncTwo(25);
-		//echo $age;
-
-	// global
-
-	$name = 'mario';
-
-	/* function sayHello(){
-		global $name; // => will not work without this line
-		$name = 'moana'; // => the name will change globally
-		echo "hello $name";
-	}
-
-	sayHello();
-	echo $name; */
-
-	/* function sayBye($name){
-		$name = 'wario';
-		echo "bye $name" . '<br />';
-	}
-
-	sayBye($name); // name => wario
-	echo $name;  // name => mario */
+// the difference between them is the include function will render the rest of the code of the attached file crashed but require will not display any thing if there was a problem
 
 
-	// if we want to change the name in all 
-
-	function sayBye(&$name){
-		$name = 'wario';
-		echo "bye $name" . '<br />';
-	}
-
-	sayBye($name); // name => wario
-	echo $name;  // name => wario
-
+echo 'end of php';
+	
  ?>
 
  <!DOCTYPE html>
@@ -60,6 +18,6 @@
  	<title>PHP Tutorials </title>
  </head>
  <body>
- 
+	<?php include 'content.php'; ?>
  </body>
  </html>
